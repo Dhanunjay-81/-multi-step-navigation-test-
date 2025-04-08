@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Navigation Test Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="step1">
+            <h1>Testing Website: Step 1</h1>
+            <div class="step-indicator">Step 1 of 5</div>
+            <p>This is the first page in our navigation chain. Click the button below to proceed to the next step.</p>
+            <p>This site demonstrates multi-step navigation through different URLs.</p>
+            <a href="#step2" class="button" onclick="showStep('step2'); return false;">Proceed to Step 2</a>
+        </div>
+
+        <div id="step2" style="display: none;">
+            <h1>Testing Website: Step 2</h1>
+            <div class="step-indicator">Step 2 of 5</div>
+            <p>You've successfully navigated to the second page in our chain.</p>
+            <p>Each click updates the URL hash and displays a new page.</p>
+            <a href="#step3" class="button" onclick="showStep('step3'); return false;">Continue to Step 3</a>
+        </div>
+
+        <div id="step3" style="display: none;">
+            <h1>Testing Website: Step 3</h1>
+            <div class="step-indicator">Step 3 of 5</div>
+            <p>You're now on the third page of our navigation sequence.</p>
+            <p>Just two more steps until you reach the final data.</p>
+            <a href="#step4" class="button" onclick="showStep('step4'); return false;">Move to Step 4</a>
+        </div>
+
+        <div id="step4" style="display: none;">
+            <h1>Testing Website: Step 4</h1>
+            <div class="step-indicator">Step 4 of 5</div>
+            <p>You're now on the fourth page of our testing sequence.</p>
+            <p>Just one more click to reach the data you're looking for!</p>
+            <a href="#step5" class="button" onclick="showStep('step5'); return false;">Final Step</a>
+        </div>
+
+        <div id="step5" style="display: none;">
+            <h1>Testing Website: Final Step</h1>
+            <div class="step-indicator">Step 5 of 5</div>
+            <p>Congratulations! You've successfully navigated through all the steps.</p>
+            <p>Here's the data you were looking for:</p>
+            <div class="data-container">
+                <h2>Sample Test Data</h2>
+                <p><strong>User ID:</strong> TEST_USER_12345</p>
+                <p><strong>Session Token:</strong> a1b2c3d4-e5f6-7890-abcd-ef1234567890</p>
+                <p><strong>Timestamp:</strong> <span id="current-time"></span></p>
+                <p><strong>Navigation Path:</strong> step1 → step2 → step3 → step4 → step5</p>
+                <p><strong>Test Status:</strong> Complete</p>
+            </div>
+            <a href="#step1" class="button" onclick="showStep('step1'); return false;">Start Over</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
